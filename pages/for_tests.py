@@ -32,7 +32,7 @@ class Registration:
     def type_pass(self,value):
         browser.element('.cy-registration-password-input').type(value)
 
-    def chexk_error(self,value):
+    def check_error(self,value):
         browser.element('.ant-form-item-has-error .ant-form-item-control').should(have.text(value))
         #Введите правильный адрес электронной почты.
 
