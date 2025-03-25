@@ -1,6 +1,6 @@
 from selene import browser, have
 
-
+#готово
 class Authorization:
     AUTH_BUTTON = '.ant-col.ant-col-xs-0 .cy-login-button'
     ENTER_BUTTON = '.kAlGSv'
@@ -24,7 +24,7 @@ class Authorization:
         browser.element('.frvPfg').should(have.text(value))
         #Пользователя с таким телефоном не найдено
 
-
+#готово
 class Registration:
     def type_email(self,value):
         browser.element('.cy-registration-email-input').type(value)
@@ -69,8 +69,12 @@ class SubscribeTotalAmount:
 
 
 class SubscribeFromBook:
+
+    def open(self):
+        browser.open('/catalog/books/')
+
     def select_book(self):
-        browser.element('.fvWzhc .hh1ehr-1').click()
+        browser.all('.e4xwgl-0.iJwsmp')[4].click()
 
     def click_subscribe(self):
         browser.element('.ant-btn-trial').click()
