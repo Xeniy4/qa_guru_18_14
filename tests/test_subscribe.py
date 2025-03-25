@@ -1,8 +1,8 @@
 from pages.for_tests import SubscribeTotalAmount, SubscribeFromBook, SearchBook
 import allure
 
-amount_subscribe = SubscribeTotalAmount
-book_subscribe = SubscribeFromBook
+amount_subscribe = SubscribeTotalAmount()
+book_subscribe = SubscribeFromBook()
 
 
 def test_total_amount_subscribe():

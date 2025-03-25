@@ -2,10 +2,10 @@ from pages.for_tests import Authorization, Registration
 import allure
 
 
-auth = Authorization
-reg = Registration
+auth = Authorization()
+reg = Registration()
 
-def test_auth():
+def test_auth(browser_manager):
 
     with allure.step('Открыть главную страницу'):
         auth.open()

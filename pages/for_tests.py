@@ -15,7 +15,7 @@ class Authorization:
         browser.element('.ant-input.cy-login-email-input').type(value)
 
     def type_pass(self,value):
-        browser.element('.ant-input-password').type(value)
+        browser.element('.ant-input-password .ant-input').type(value)
 
     def click_enter_button(self):
         browser.element(self.ENTER_BUTTON).click()

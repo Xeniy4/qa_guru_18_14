@@ -2,8 +2,8 @@
 from pages.for_tests import Podcast, SearchBook
 import allure
 
-podcast = Podcast
-search = SearchBook
+podcast = Podcast()
+search = SearchBook()
 
 def test_add_podcast():
 
