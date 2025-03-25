@@ -36,7 +36,7 @@ class Registration:
         browser.element('.ant-form-item-has-error .ant-form-item-control').should(have.text(value))
         #Введите правильный адрес электронной почты.
 
-
+#готово
 class SubscribeTotalAmount:
     def open(self):
         browser.open('/purchase_gift/')
@@ -67,7 +67,7 @@ class SubscribeTotalAmount:
         browser.element('.czbcvn-4 .sc-bdfBwQ').should(have.text(value))
         #229 руб.
 
-
+#готово
 class SubscribeFromBook:
 
     def open(self):
@@ -83,7 +83,7 @@ class SubscribeFromBook:
         browser.element('.ant-btn-block').should(have.text(value))
         #Зарегистрироваться
 
-
+#готово
 class Podcast:
     def open(self):
         browser.open('/podcasters/')
@@ -109,6 +109,9 @@ class Podcast:
 
 
 class SearchBook:
+    def open(self):
+        browser.open('/')
+
     def type_search_text(self,value):
         browser.element('.ant-input').type(value)
 

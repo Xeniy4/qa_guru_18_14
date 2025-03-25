@@ -7,7 +7,7 @@ reg = Registration
 
 def test_auth():
 
-    with allure.step('Открыть браузер'):
+    with allure.step('Открыть главную страницу'):
         auth.open()
 
     with allure.step('Открыть окно авторизации'):
@@ -28,7 +28,7 @@ def test_auth():
 
 def test_registration():
 
-    with allure.step('Открыть браузер'):
+    with allure.step('Открыть главную страницу'):
         auth.open()
 
     with allure.step('Открыть окно авторизации'):

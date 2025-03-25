@@ -7,7 +7,7 @@ book_subscribe = SubscribeFromBook
 
 def test_total_amount_subscribe():
 
-    with allure.step('Открыть страницу подписки'):
+    with allure.step('Открыть страницу "Подписки"'):
         amount_subscribe.open()
 
     with allure.step('Выбрать открытку'):
@@ -15,6 +15,9 @@ def test_total_amount_subscribe():
 
     with allure.step('Написать текст получателю'):
         amount_subscribe.type_text_message_for_recipient('тест')
+
+    with allure.step('Скролл вниз'):
+        amount_subscribe.scroll()
 
     with allure.step('Написать email получателя'):
         amount_subscribe.type_recipient_email('recipient_test@test.com')
@@ -24,6 +27,9 @@ def test_total_amount_subscribe():
 
     with allure.step('Выбрать период'):
         amount_subscribe.select_period()
+
+    with allure.step('Скролл вниз'):
+        amount_subscribe.scroll()
 
     with allure.step('Выбрать способ оплаты'):
         amount_subscribe.select_pay()
