@@ -34,6 +34,9 @@ def test_registration():
     with allure.step('Открыть окно авторизации'):
         auth.open_auth_window()
 
+    with allure.step('Нажать на кнопку Зарегистрироваться'):
+        reg.reg_button()
+
     with allure.step('Написать невалидную почту'):
         reg.type_email('test123')
 
@@ -41,7 +44,7 @@ def test_registration():
         reg.type_pass('Test12345678-')
 
     with allure.step('Нажать на кнопку Зарегистрироваться'):
-        auth.click_enter_button()
+        reg.reg_button_enter()
 
     with allure.step('Проверка отображения ошибки'):
         reg.check_error('Введите правильный адрес электронной почты.')

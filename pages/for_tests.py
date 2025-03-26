@@ -26,11 +26,17 @@ class Authorization:
 
 #готово
 class Registration:
+    def reg_button(self):
+        browser.element('.cy-toggle-form-registration').click()
+
     def type_email(self,value):
-        browser.element('.cy-registration-email-input').type(value)
+        browser.element('.cy-registration-email-input .ant-input').type(value)
 
     def type_pass(self,value):
-        browser.element('.cy-registration-password-input').type(value)
+        browser.element('.cy-registration-password-input .ant-input').type(value)
+
+    def reg_button_enter(self):
+        browser.element('.cy-login-submit-button').click()
 
     def check_error(self,value):
         browser.element('.ant-form-item-has-error .ant-form-item-control').should(have.text(value))
