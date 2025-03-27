@@ -1,6 +1,6 @@
 from pages.for_tests import Authorization, Registration
 import allure
-
+import time
 
 auth = Authorization()
 reg = Registration()
@@ -14,7 +14,7 @@ def test_auth(browser_manager):
         auth.open_auth_window()
 
     with allure.step('Ввести номер телефона'):
-        auth.type_mobile('89123456789')
+        auth.type_mobile('89526845122')
 
     with allure.step('Ввести пароль'):
         auth.type_pass('123456789')
@@ -23,7 +23,7 @@ def test_auth(browser_manager):
         auth.click_enter_button()
 
     with allure.step('Проверка отображения ошибки'):
-        auth.check_error('Пользователя с таким телефоном не найдено')
+        auth.check_error('Пользователя с таким телефоном не найдено.')
 
 
 def test_registration():
@@ -47,4 +47,4 @@ def test_registration():
         reg.reg_button_enter()
 
     with allure.step('Проверка отображения ошибки'):
-        reg.check_error('Введите правильный адрес электронной почты.')
+        auth.check_error('Введите правильный адрес электронной почты.')

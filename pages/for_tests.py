@@ -1,4 +1,5 @@
 from selene import browser, have
+import time
 
 #готово
 class Authorization:
@@ -20,9 +21,11 @@ class Authorization:
     def click_enter_button(self):
         browser.element(self.ENTER_BUTTON).click()
 
+
+
     def check_error(self,value):
-        browser.element('.frvPfg').should(have.text(value))
-        #Пользователя с таким телефоном не найдено
+        browser.element('.ant-form-item-has-error .ant-form-item-explain div').should(have.text(value))
+        #Пользователя с таким телефоном не найдено.
 
 #готово
 class Registration:
