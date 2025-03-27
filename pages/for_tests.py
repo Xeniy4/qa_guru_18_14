@@ -80,7 +80,7 @@ class SubscribeFromBook:
         browser.open('/catalog/books/')
 
     def select_book(self):
-        browser.all('.e4xwgl-0.iJwsmp')[2].click()
+        browser.all('div.ant-col a img')[2].click()
 
     def click_subscribe(self):
         browser.element('.ant-btn-trial').click()
