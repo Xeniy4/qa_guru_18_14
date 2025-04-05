@@ -1,9 +1,16 @@
+from asyncio import timeout
+from random import random
+
+from selene.support.shared import config
+
 from pages.page_tests import Authorization, Registration
 import allure
+import random
 
 
 auth = Authorization()
 reg = Registration()
+mobile = random.randint(11111111111,99999999999)
 
 def test_auth(browser_manager):
 
@@ -14,13 +21,14 @@ def test_auth(browser_manager):
         auth.open_auth_window()
 
     with allure.step('Ввести номер телефона'):
-        auth.type_mobile('89526845122')
+        auth.type_mobile(mobile)
 
     with allure.step('Ввести пароль'):
         auth.type_pass('123456789')
 
     with allure.step('Нажать на кнопку Войти'):
         auth.click_enter_button()
+        config.timeout = 3
 
     with allure.step('Проверка отображения ошибки'):
         auth.check_error('Пользователя с таким телефоном не найдено.')
