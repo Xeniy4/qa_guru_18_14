@@ -1,6 +1,6 @@
 from pages.page_tests import Authorization, Registration
 import allure
-import time
+
 
 auth = Authorization()
 reg = Registration()

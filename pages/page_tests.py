@@ -24,7 +24,7 @@ class Authorization:
 
 
     def check_error(self,value):
-        browser.element('.ant-form-item-has-error .ant-form-item-explain div').should(have.text(value))
+        browser.element('.ant-form-item-has-error .ant-form-item-explain').should(have.text(value))
         #Пользователя с таким телефоном не найдено.
 
 #готово
