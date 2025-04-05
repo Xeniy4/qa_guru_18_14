@@ -40,5 +40,5 @@ def test_search_book():
         search.press_enter()
 
     with allure.step('Проверка поиска книги'):
-        search.check_name_book('Алмазная колесница')
+        search.check_name_book('«Алмазная колесница»')
 
