@@ -128,7 +128,7 @@ class SearchBook:
         browser.element('.ant-input').press_enter()
 
     def check_name_book(self,value):
-        browser.element('.e4xwgl-1 .hhskLb').should(have.text(value))
+        browser.all('.ant-col.ant-col-lg-10').should(have.text(value))
         #Алмазная колесница
 
 

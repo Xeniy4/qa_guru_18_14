@@ -1,5 +1,5 @@
 # 4 и 3 тест поиск в поиске и подкаст
-from pages.for_tests import Podcast, SearchBook
+from pages.page_tests import Podcast, SearchBook
 import allure
 
 podcast = Podcast()

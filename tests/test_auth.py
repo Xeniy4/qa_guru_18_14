@@ -1,4 +1,4 @@
-from pages.for_tests import Authorization, Registration
+from pages.page_tests import Authorization, Registration
 import allure
 import time
 
